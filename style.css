@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 20;
+    box-sizing: border-box;
+}
+.Formualario {
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Arial Narrow';
+    color: white;
+}
+.Formualario h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+

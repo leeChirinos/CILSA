@@ -3,45 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario</title>
+    <title>formulario</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="Formualario">
-        <h4>Registro</h4>
-      <input
-        type="text"
-        name="Nombre"
-        id="nombres"
-        placeholder="Ingrese su nombre"
-      />
-      <input class="Datos"
-        type="text"
-        name="Apellido"
-        id="apellidos"
-        placeholder="Ingrese su Apellido"
-      />
-      <input class="Datos"
-        type="email"
-        name="email"
-        id="mail"
-        placeholder="Ingrese su correo electronico"
-      />
-      <input class="Datos"
-        type="text"
-        name="Fecha de nacimiento"
-        id="fecha"
-        placeholder="Ingrese su fecha de nacimiento"
-      />
-      <input class="Datos"
-        type="text"
-        name="Pais de residencia"
-        id="fecha"
-        placeholder="Ingrese el pais donde reside"
-      />
-      <input class="Boton1" type="submit" value="Enviar" />
-      <p><a href="#">¿Desea cambiar el estilo?</a></p>
-      <input class="Boton2" type="submit" value="Tamaño de letra" />
-    </section>
+    <form action= "" class="registro" id = "registro">
+      <section class="formulario">
+        <h1 align ="center"><strong>Registro</strong></h1>
+        <!-- Perfil Personal -->
+        <label for="nombre" class="registro__label">Nombres</label>
+        <input
+          class="datos"
+          type="text"
+          name="Nombre"
+          id="nombres"
+          placeholder="Ingrese su nombre"
+          required
+        />
+        <label for="apellido" class="registro__label">Apellidos</label>
+        <input
+          class="datos"
+          type="text"
+          name="apellido"
+          id="apellidos"
+          placeholder="Ingrese su Apellido"
+          required
+        />
+        <label for="email" class="registro__label">Correo electrónico</label>
+        <input
+          class="datos"
+          type="email"
+          name="email"
+          id="mail"
+          placeholder="Ingrese su correo electronico"
+          required
+        />
+        <label for="fecha_de_nacimiento" class="registro__label">Fecha de Nacimiento</label>
+        <input
+          class="datos"
+          type="date"
+          name="fecha_de_nacimiento"
+          id="fecha"
+          placeholder="Ingrese su fecha de nacimiento"
+          required
+        />
+        <label for="pais_de_residencia" class="registro__label">País de residencia</label>
+        <input
+          class="datos"
+          type="text"
+          name="pais_de_residencia"
+          id="fecha"
+          placeholder="Ingrese el pais donde reside"
+          required
+        />
+        <label for="numero_de_teléfono" class="registro__label">Número de Teléfono</label>
+        <input
+          class="datos"
+          type="number"
+          name="numero_de_teléfono"
+          id="teléfono"
+          placeholder="Ingrese su número de teléfono"
+          required
+        />
+        <div style="text-align: center;">
+          <input class="boton1" type="submit" value="Registrar" />
+          <p><a href="#">¿Desea enviar información?</a></p>
+          </div>
+      </section>
+    </form>
+    <script>
+      src = 'script.js'
+    </script>
   </body>
 </html>

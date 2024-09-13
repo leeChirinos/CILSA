@@ -1,78 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>formulario</title>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
   </head>
-  <body>
-    <form action= "" class="registro" id = "registro">
-      <section class="formulario">
-        <h1 align ="center"><strong>Registro</strong></h1>
-        <!-- Perfil Personal -->
-        <label for="nombre" class="registro__label">Nombres</label>
-        <input
-          class="datos"
-          type="text"
-          name="Nombre"
-          id="nombres"
-          placeholder="Ingrese su nombre"
-          required
-        />
-        <label for="apellido" class="registro__label">Apellidos</label>
-        <input
-          class="datos"
-          type="text"
-          name="apellido"
-          id="apellidos"
-          placeholder="Ingrese su Apellido"
-          required
-        />
-        <label for="email" class="registro__label">Correo electrónico</label>
-        <input
-          class="datos"
-          type="email"
-          name="email"
-          id="mail"
-          placeholder="Ingrese su correo electronico"
-          required
-        />
-        <label for="fecha_de_nacimiento" class="registro__label">Fecha de Nacimiento</label>
-        <input
-          class="datos"
-          type="date"
-          name="fecha_de_nacimiento"
-          id="fecha"
-          placeholder="Ingrese su fecha de nacimiento"
-          required
-        />
-        <label for="pais_de_residencia" class="registro__label">País de residencia</label>
-        <input
-          class="datos"
-          type="text"
-          name="pais_de_residencia"
-          id="fecha"
-          placeholder="Ingrese el pais donde reside"
-          required
-        />
-        <label for="numero_de_teléfono" class="registro__label">Número de Teléfono</label>
-        <input
-          class="datos"
-          type="number"
-          name="numero_de_teléfono"
-          id="teléfono"
-          placeholder="Ingrese su número de teléfono"
-          required
-        />
-        <div style="text-align: center;">
-          <input class="boton1" type="submit" value="Registrar" />
-          <p><a href="#">¿Desea enviar información?</a></p>
+  <body class="bg-primary">
+    <div class="container bg-light w-50 border m-5 p-5 mx-auto shadow">
+      <div>
+        <form method="post" action="#" class="registro" id="registro">
+          <div class="form-group">
+            <section class="formulario">
+              <h1 class="text-primary text-center"><strong>Registro</strong></h1>
           </div>
-      </section>
-    </form>
-    <script>
-      src = 'script.js'
-    </script>
+            <!-- Perfil Personal -->
+  
+            <div class="form-group">
+              <label for="nombre" class="registro__label d-block">Nombres</label>
+              <input
+                class="datos w-100"
+                type="text"
+                name="nombre"
+                id="nombres"
+                placeholder="Ingrese su nombre"
+                required
+                minlength="2"
+                maxlength="30"
+                pattern="[a-zA-Z]+"
+              />
+            </div>
+            
+            <div class="form-group">
+              <label for="apellido" class="registro__label d-block">Apellidos</label>
+              <input
+                class="datos w-100"
+                type="text"
+                name="apellido"
+                id="apellidos"
+                placeholder="Ingrese su Apellido"
+                minlength="2"
+                maxlength="30"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email" class="registro__label d-block">Correo electrónico</label>
+              <input
+                class="datos w-100"
+                type="email"
+                name="email"
+                id="mail"
+                placeholder="Ingrese su correo electronico"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="fecha_de_nacimiento" class="registro__label d-block"
+              >Fecha de Nacimiento</label
+            >
+            <input
+              class="datos w-70"
+              type="date"
+              name="fecha_de_nacimiento"
+              id="fecha"
+              placeholder="Ingrese su fecha de nacimiento"
+              required
+            />
+            </div>
+            
+            <div class="form-group">
+              <label for="pais_de_residencia" class="registro__label d-block"
+              >País de residencia</label
+            >
+            <input
+              class="datos w-100"
+              type="text"
+              name="pais_de_residencia"
+              id="fecha"
+              placeholder="Ingrese el pais donde reside"
+              minlength="2"
+              maxlength="30"
+              required
+            />
+            </div>
+            <div class="form-group">
+              <label for="numero_de_teléfono" class="registro__label d-block"
+              >Número de Teléfono</label
+            >
+            <input
+              class="datos w-100"
+              type="number"
+              name="numero_de_teléfono"
+              id="teléfono"
+              placeholder="Ingrese su número de teléfono"
+              pattern="[0-10]+"
+              minlength="10"
+              maxlength="10"
+              required
+            />
+            </div class="form-group">
+            <div style="text-align: center">
+              <input type="submit" value="Registrar" class="w-100 mt-3 btn btn-outline-primary btn-sm">
+             </div>
+             <div class="form-group">
+              <br>
+              <p><a href="#">¿Desea enviar información?</a></p>
+             <input type="submit" value="Enviar" class="w-100 mt-3 btn btn-outline-primary btn-sm">
+             </div>
+          </section>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
